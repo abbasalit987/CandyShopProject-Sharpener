@@ -1,12 +1,12 @@
 //console.log('Hello World!');
 // console.log(document.getElementsByName('field1'));
-link = "https://crudcrud.com/api/c9e11ddc98c94c14afa8b02cbcfcf4f7"
+link = "http://localhost:9000"
 
 let loginForm = document.getElementById("loginForm")
 
 const getData = async () => {
 	try {
-        const res = await axios.get(`${link}/stockinfo`)
+        const res = await axios.get(`${link}/getstockinfo`)
         for (let i =0; i<res.data.length; i++){
             addUser(res.data[i])
         }
